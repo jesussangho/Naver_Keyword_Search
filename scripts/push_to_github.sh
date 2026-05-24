@@ -10,16 +10,16 @@ if ! gh auth status >/dev/null 2>&1; then
   exit 1
 fi
 
-REPO_NAME="${REPO_NAME:-golden-keyword-miner}"
+REPO_NAME="${REPO_NAME:-Naver_Keyword_Search}"
+REMOTE_URL="${REMOTE_URL:-https://github.com/jesussangho/Naver_Keyword_Search.git}"
 VISIBILITY="${VISIBILITY:-public}"
 
-if git remote get-url origin >/dev/null 2>&1; then
-  echo "==> origin 원격이 이미 있습니다. push만 진행합니다."
-  git push -u origin main
-else
-  echo "==> GitHub 저장소 생성 및 push: $REPO_NAME"
-  gh repo create "$REPO_NAME" --"$VISIBILITY" --source=. --remote=origin --push
+if ! git remote get-url origin >/dev/null 2>&1; then
+  git remote add origin "$REMOTE_URL"
 fi
+
+echo "==> push: $REMOTE_URL"
+git push -u origin main
 
 echo ""
 echo "완료: $(gh repo view --json url -q .url)"
