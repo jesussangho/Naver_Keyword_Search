@@ -1,0 +1,44 @@
+# 실행 파일 빌드 가이드
+
+## GUI 앱 실행 (개발)
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python app_gui.py
+```
+
+## macOS (.app)
+
+먼저 tkinter 지원 Python이 필요합니다.
+
+```bash
+brew install python-tk@3.13
+chmod +x scripts/build_mac.sh
+./scripts/build_mac.sh
+```
+
+결과: `dist/황금키워드채굴기.app`
+
+실행:
+
+```bash
+open dist/황금키워드채굴기.app
+```
+
+## Windows (.exe)
+
+**Windows PC**에서 아래를 실행하세요. (Mac에서는 exe를 직접 만들 수 없습니다.)
+
+```bat
+scripts\build_win.bat
+```
+
+결과: `dist\황금키워드채굴기.exe`
+
+## 참고
+
+- 엑셀 파일은 실행 파일이 있는 폴더에 저장됩니다.
+- macOS에서 처음 실행 시 보안 경고가 나오면: 시스템 설정 → 개인정보 보호 및 보안 → 허용
+- API 키는 기존 스크립트와 동일한 환경 변수를 사용합니다.
