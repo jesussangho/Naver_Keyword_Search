@@ -1,4 +1,4 @@
-# 황금키워드채굴기
+# Naver Keyword Search (황금키워드채굴기)
 
 네이버 키워드 분석 도구 — 월간 검색량, 연관 키워드, 블로그 문서수 조회 및 엑셀 저장.
 
@@ -51,3 +51,7 @@ python 문서수정.py
 | `NAVER_CLIENT_SECRET` | 네이버 개발자 Client Secret |
 
 실행 파일(.app / .exe) 사용 시에도 **실행 파일과 같은 폴더**에 `.env`를 두세요.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
