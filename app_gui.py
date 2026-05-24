@@ -13,6 +13,12 @@ from typing import Callable, List, Optional, Tuple
 
 import customtkinter as ctk
 
+try:
+    import config  # noqa: F401 — .env 로드 및 API 키 검증
+except RuntimeError as exc:
+    print(exc, file=sys.stderr)
+    sys.exit(1)
+
 import 문서수정
 import 연관키워드검색
 import 월간검색량

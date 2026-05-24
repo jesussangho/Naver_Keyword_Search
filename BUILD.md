@@ -37,8 +37,23 @@ scripts\build_win.bat
 
 결과: `dist\황금키워드채굴기.exe`
 
+## API 키 (.env)
+
+빌드 후 실행 파일과 **같은 폴더**에 `.env`를 복사합니다.
+
+```bash
+cp .env.example dist/황금키워드채굴기.app/Contents/MacOS/.env   # macOS 앱 내부
+# 또는 dist 폴더 옆에 .env 배치 (onedir 빌드 시 실행 파일 위치 기준)
+```
+
+Windows:
+
+```bat
+copy .env.example dist\.env
+```
+
 ## 참고
 
 - 엑셀 파일은 실행 파일이 있는 폴더에 저장됩니다.
 - macOS에서 처음 실행 시 보안 경고가 나오면: 시스템 설정 → 개인정보 보호 및 보안 → 허용
-- API 키는 기존 스크립트와 동일한 환경 변수를 사용합니다.
+- `.env`는 Git에 포함되지 않습니다. `.env.example`만 저장소에 올라갑니다.

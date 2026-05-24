@@ -8,6 +8,14 @@
 - **연관 키워드** — 검색광고 키워드 도구 연관 키워드 목록
 - **문서수 조회** — 네이버 블로그 검색 문서 수
 
+## 설정
+
+```bash
+cp .env.example .env
+```
+
+`.env` 파일에 API 키를 입력합니다. (이 파일은 Git에 올라가지 않습니다.)
+
 ## 실행 (GUI)
 
 ```bash
@@ -32,7 +40,7 @@ python 연관키워드검색.py
 python 문서수정.py
 ```
 
-## 환경 변수 (선택)
+## 환경 변수 (.env)
 
 | 변수 | 설명 |
 |------|------|
@@ -41,3 +49,5 @@ python 문서수정.py
 | `NAVER_SEARCH_CUSTOMER_ID` | 광고주 ID |
 | `NAVER_CLIENT_ID` | 네이버 개발자 Client ID |
 | `NAVER_CLIENT_SECRET` | 네이버 개발자 Client Secret |
+
+실행 파일(.app / .exe) 사용 시에도 **실행 파일과 같은 폴더**에 `.env`를 두세요.

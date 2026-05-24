@@ -2,13 +2,11 @@
 네이버 검색 API - 블로그 검색 결과의 문서수(total) 조회
 """
 import json
-import os
 import sys
 import urllib.parse
 import urllib.request
 
-CLIENT_ID = os.environ.get("NAVER_CLIENT_ID", "OmIWV_6SWBTRPhDsMhmo")
-CLIENT_SECRET = os.environ.get("NAVER_CLIENT_SECRET", "qWj8puJFp_")
+from config import CLIENT_ID, CLIENT_SECRET
 
 
 def get_blog_document_count(query: str) -> int:

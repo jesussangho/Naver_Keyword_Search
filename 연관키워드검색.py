@@ -8,7 +8,6 @@ import base64
 import hashlib
 import hmac
 import json
-import os
 import re
 import sys
 import time
@@ -24,16 +23,9 @@ except ImportError:
     print("  .venv/bin/python 연관키워드검색.py")
     sys.exit(1)
 
+from config import API_KEY, CUSTOMER_ID, SECRET_KEY
+
 BASE_URL = "https://api.searchad.naver.com"
-API_KEY = os.environ.get(
-    "NAVER_SEARCH_ACCESS_LICENSE_KEY",
-    "0100000000dd8f61526f89d0750886d5d0fe0ef71a018ae95cdd17b407f0d54b106bab7036",
-)
-SECRET_KEY = os.environ.get(
-    "NAVER_SEARCH_SECRET_KEY",
-    "AQAAAADdj2FSb4nQdQiG1dD+Dvca8aEIzoYUNkvbq4Hjie4znQ==",
-)
-CUSTOMER_ID = os.environ.get("NAVER_SEARCH_CUSTOMER_ID", "4394922")
 
 EXCEL_HEADERS = (
     "키워드",

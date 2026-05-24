@@ -8,5 +8,6 @@ dist/
 .DS_Store
 *.xlsx
 .env
-.env.*
+.env.local
+!.env.example
 .vscode/
